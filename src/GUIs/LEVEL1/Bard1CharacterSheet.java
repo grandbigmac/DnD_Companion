@@ -1,24 +1,25 @@
-package GUIs;
+package GUIs.LEVEL1;
 
-import Classes.Rogue;
-import dbAccess.*;
+import Classes.Bard;
+import dbAccess.getData;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CharacterSheet {
+public class Bard1CharacterSheet {
 
     JFrame frame;
     JPanel panel;
-    JLabel nameTag, classTag, levelTag, acTag, healthTag, strTag, dexTag, conTag, intelTag, wisTag, chaTag, featuresTag, raceTag;
+    JLabel nameTag, classTag, levelTag, acTag, healthTag, strTag, dexTag, conTag, intelTag, wisTag, chaTag, featuresTag, raceTag, raceFeaturesTag;
     JLabel nameLab, classLab, levelLab, acLab, healthLab, scores, str, dex, con, intel, wis, cha, charRace;
-    JButton reroll, checkFeatures;
-    JComboBox<String> features;
+    JButton reroll, checkFeatures, checkRaceFeatures;
+    JComboBox<String> classfeatures;
+    JComboBox<String> racefeatures;
     GridBagConstraints gbc = new GridBagConstraints();
 
-    public CharacterSheet(Rogue r) {
+    public Bard1CharacterSheet(Bard r) {
 
         frame = new JFrame();
         panel = new JPanel();
@@ -162,9 +163,9 @@ public class CharacterSheet {
         reroll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Rogue f = new Rogue();
-                f.createLevel1Rogue(r.charName, r.charClass, r.charRace);
-                CharacterSheet i = new CharacterSheet(f);
+                Bard f = new Bard();
+                f.createLevel1Bard(r.charName, r.charClass, r.charRace);
+                Bard1CharacterSheet i = new Bard1CharacterSheet(f);
                 frame.dispose();
             }
         });
@@ -178,10 +179,10 @@ public class CharacterSheet {
         gbc.gridx = 4;
         gbc.gridy = 1;
         panel.add(featuresTag, gbc);
-        features = new JComboBox(r.classFeatures.toArray());
+        classfeatures = new JComboBox(r.classFeatures.toArray());
         gbc.gridx = 4;
         gbc.gridy = 2;
-        panel.add(features, gbc);
+        panel.add(classfeatures, gbc);
 
         checkFeatures = new JButton("Check");
         gbc.gridx = 4;
@@ -189,12 +190,37 @@ public class CharacterSheet {
         checkFeatures.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String description = getData.getClassFeaturesDescription((String) features.getSelectedItem());
-                JOptionPane.showMessageDialog(frame, description, (String) features.getSelectedItem(), JOptionPane.INFORMATION_MESSAGE);
+                String description = getData.getClassFeaturesDescription((String) classfeatures.getSelectedItem());
+                JOptionPane.showMessageDialog(frame, description, (String) classfeatures.getSelectedItem(), JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
         panel.add(checkFeatures, gbc);
+
+        raceFeaturesTag = new JLabel("Race Features: ");
+        raceFeaturesTag.setForeground(Color.red);
+        gbc.gridx = 4;
+        gbc.gridy = 4;
+        panel.add(raceFeaturesTag, gbc);
+        String k = getData.getRaceFeatures(r.charRace);
+        k = k.substring(1);
+        String[] divisions = k.split(", ");
+        racefeatures = new JComboBox(divisions);
+        gbc.gridx = 4;
+        gbc.gridy = 5;
+        panel.add(racefeatures, gbc);
+
+        checkRaceFeatures = new JButton("Check");
+        gbc.gridx = 4;
+        gbc.gridy = 6;
+        checkRaceFeatures.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String description = getData.getRaceFeaturesDescription((String) racefeatures.getSelectedItem());
+                JOptionPane.showMessageDialog(frame, description, (String) racefeatures.getSelectedItem(), JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        panel.add(checkRaceFeatures, gbc);
 
 
         frame.add(panel);

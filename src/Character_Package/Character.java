@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public abstract class Character {
 
-    public static String charName, charRace, charClass, charBackground, charAlignment;
+    public static String charName, charRace, charClass, charBackground, charAlignment, racialASI;
     public static int strength, dexterity, constitution, intelligence, wisdom, charisma, healthPoints, charLevel, baseAC = 10, armourClass;
     public ArrayList<String> raceFeatures = new ArrayList<>();
 

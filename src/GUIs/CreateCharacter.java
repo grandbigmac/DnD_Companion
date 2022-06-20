@@ -1,6 +1,8 @@
 package GUIs;
 
-import Classes.Rogue;
+import Classes.*;
+import Classes.Barbarian;
+import GUIs.LEVEL1.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +18,7 @@ public class CreateCharacter {
     JTextField nameTF;
     JButton createRandom, createChoose;
     JComboBox<String> raceCB, classCB;
-    ArrayList<String> classes = new ArrayList<String>(Arrays.asList("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk",
+    ArrayList<String> classes = new ArrayList<String>(Arrays.asList("Barbarian", "Bard", "Cleric", "Druid", "Barbarian", "Monk",
             "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"));
     ArrayList<String> races = new ArrayList<String>(Arrays.asList("Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling",
            "Half-Orc", "Human", "Tiefling"));
@@ -84,9 +86,88 @@ public class CreateCharacter {
                 if (classCB.getSelectedItem().toString() == "Rogue") {
                     Rogue r = new Rogue();
                     r.createLevel1Rogue(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
-                    CharacterSheet i = new CharacterSheet(r);
+                    Rogue1CharacterSheet i = new Rogue1CharacterSheet(r);
                     frame.dispose();
                 }
+
+                else if (classCB.getSelectedItem().toString() == "Barbarian") {
+                    Barbarian r = new Barbarian();
+                    r.createLevel1Barbarian(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Barbarian1CharacterSheet i = new Barbarian1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Barbarian") {
+                    Barbarian r = new Barbarian();
+                    r.createLevel1Barbarian(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Barbarian1CharacterSheet i = new Barbarian1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Bard") {
+                    Bard r = new Bard();
+                    r.createLevel1Bard(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Bard1CharacterSheet i = new Bard1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Cleric") {
+                    Cleric r = new Cleric();
+                    r.createLevel1Cleric(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Cleric1CharacterSheet i = new Cleric1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Druid") {
+                    Druid r = new Druid();
+                    r.createLevel1Druid(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Druid1CharacterSheet i = new Druid1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Monk") {
+                    Monk r = new Monk();
+                    r.createLevel1Monk(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Monk1CharacterSheet i = new Monk1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Paladin") {
+                    Paladin r = new Paladin();
+                    r.createLevel1Paladin(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Paladin1CharacterSheet i = new Paladin1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Ranger") {
+                    Ranger r = new Ranger();
+                    r.createLevel1Ranger(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Ranger1CharacterSheet i = new Ranger1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Sorcerer") {
+                    Sorcerer r = new Sorcerer();
+                    r.createLevel1Sorcerer(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Sorcerer1CharacterSheet i = new Sorcerer1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Warlock") {
+                    Warlock r = new Warlock();
+                    r.createLevel1Warlock(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Warlock1CharacterSheet i = new Warlock1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+                else if (classCB.getSelectedItem().toString() == "Wizard") {
+                    Wizard r = new Wizard();
+                    r.createLevel1Wizard(nameTF.getText(), classCB.getSelectedItem().toString(), raceCB.getSelectedItem().toString());
+                    Wizard1CharacterSheet i = new Wizard1CharacterSheet(r);
+                    frame.dispose();
+                }
+
+
 
             }
         });

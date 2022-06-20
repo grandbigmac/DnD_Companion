@@ -2,6 +2,7 @@ package Classes;
 
 import Character_Package.Character;
 import Dice_Rolls.DiceRolls;
+import dbAccess.getData;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,12 +49,6 @@ public class Rogue extends Character {
         // _________________________________________________________
         // _________________________________________________________
 
-        //Setting base armour class
-        int mod = findModifier(dexterity);
-        armourClass = baseAC + mod;
-        if (armourClass < 10) {
-            armourClass = 10;
-        }
     }
 
     public void createLevel1Rogue(String cName, String cClass, String cRace) {
@@ -63,6 +58,31 @@ public class Rogue extends Character {
         charClass = cClass;
         charRace = cRace;
 
+        //ADD RACIAL ASI
+        racialASI = getData.getRacialASI(charRace);
+        racialASI = racialASI.substring(1);
+        String[] divisions = racialASI.split(", ");
+        for (int i = 0; i < divisions.length; i++) {
+            if (divisions[i] == "STR") {
+                strength = strength + 1;
+            }
+            else if (divisions[i] == "DEX") {
+                dexterity = dexterity + 1;
+            }
+            else if (divisions[i].equals("CON")) {
+                constitution = constitution + 1;
+            }
+            else if (divisions[i] == "INT") {
+                intelligence = intelligence + 1;
+            }
+            else if (divisions[i] == "WIS") {
+                wisdom = wisdom + 1;
+            }
+            else if (divisions[i] == "CHA") {
+                charisma = charisma + 1;
+            }
+        }
+
         //SET STARTING HEALTH
         int mod = findModifier(constitution);
         healthPoints = 8 + mod;
@@ -70,10 +90,20 @@ public class Rogue extends Character {
             healthPoints = 8;
         }
 
+        //Setting base armour class
+        mod = findModifier(dexterity);
+        armourClass = baseAC + mod;
+        if (armourClass < 10) {
+            armourClass = 10;
+        }
+
         //ADDING LEVEL 1 FEATURES
         classFeatures.add("Expertise 1");
         classFeatures.add("Sneak Attack 1");
         classFeatures.add("Thieves Cant");
+
+
+
 
     }
 
