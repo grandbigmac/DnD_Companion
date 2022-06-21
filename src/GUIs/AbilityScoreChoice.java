@@ -2,6 +2,7 @@ package GUIs;
 
 import Classes.*;
 import GUIs.LEVEL1.*;
+import dbAccess.getData;
 
 import javax.swing.*;
 import java.awt.*;
@@ -165,6 +166,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -188,6 +212,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -211,6 +258,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -234,6 +304,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -257,6 +350,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -280,6 +396,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -303,6 +442,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -326,6 +488,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -349,6 +534,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -372,6 +580,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -395,6 +626,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {
@@ -418,6 +672,29 @@ public class AbilityScoreChoice {
                     r.setIntelligence((Integer) intelSpin.getValue());
                     r.setWisdom((Integer) wisSpin.getValue());
                     r.setCharisma((Integer) chaSpin.getValue());
+                    r.racialASI = getData.getRacialASI(r.charRace);
+                    r.racialASI = r.racialASI.substring(1);
+                    String[] divisions = r.racialASI.split(", ");
+                    for (int i = 0; i < divisions.length; i++) {
+                        if (divisions[i].equals("STR")) {
+                            r.strength = r.strength + 1;
+                        }
+                        else if (divisions[i].equals("DEX")) {
+                            r.dexterity = r.dexterity + 1;
+                        }
+                        else if (divisions[i].equals("CON")) {
+                            r.constitution = r.constitution + 1;
+                        }
+                        else if (divisions[i].equals("INT")) {
+                            r.intelligence = r.intelligence + 1;
+                        }
+                        else if (divisions[i].equals("WIS")) {
+                            r.wisdom = r.wisdom + 1;
+                        }
+                        else if (divisions[i].equals("CHA")) {
+                            r.charisma = r.charisma + 1;
+                        }
+                    }
                     int mod = r.findModifier(r.dexterity);
                     r.armourClass = r.baseAC + mod;
                     if (r.armourClass < 10) {

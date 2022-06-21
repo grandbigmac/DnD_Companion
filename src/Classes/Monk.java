@@ -63,22 +63,22 @@ public class Monk extends Character {
         racialASI = racialASI.substring(1);
         String[] divisions = racialASI.split(", ");
         for (int i = 0; i < divisions.length; i++) {
-            if (divisions[i] == "STR") {
+            if (divisions[i].equals("STR")) {
                 strength = strength + 1;
             }
-            else if (divisions[i] == "DEX") {
+            else if (divisions[i].equals("DEX")) {
                 dexterity = dexterity + 1;
             }
             else if (divisions[i].equals("CON")) {
                 constitution = constitution + 1;
             }
-            else if (divisions[i] == "INT") {
+            else if (divisions[i].equals("INT")) {
                 intelligence = intelligence + 1;
             }
-            else if (divisions[i] == "WIS") {
+            else if (divisions[i].equals("WIS")) {
                 wisdom = wisdom + 1;
             }
-            else if (divisions[i] == "CHA") {
+            else if (divisions[i].equals("CHA")) {
                 charisma = charisma + 1;
             }
         }
